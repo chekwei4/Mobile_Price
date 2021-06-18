@@ -28,11 +28,34 @@ If two variables are correlated, we can predict one from the other. Therefore, i
 
 Per Pearson Correlation check, there's no correlation above 0.85. 
 
+<p align="center">
+    <img width=500, height=400, src="./images/cor.png">
+</p>
+
 # Chi Square Test (Categorical Features)
 
-Credits: https://
+Credits: https://towardsdatascience.com/chi-square-test-for-feature-selection-in-machine-learning-206b1f0b8223
 
-towardsdatascience.com/chi-square-test-for-feature-selection-in-machine-learning-206b1f0b8223
+Null Hypothesis (H0): Two variables are independent.
+
+Alternate Hypothesis (H1): Two variables are not independent.
+
+If p-value ≥0.05, failed to reject null hypothesis as there is no relationship between target variable and categorical features.
+
+if p_value <0.05, rejects null hypothesis as there will be some relationship between target variable and categorical features
+
+It is observed that all the 6 categorical features have large p_values, hence we fail to reject the null hypothesis: all of them are indepence of the target class, and we will unlikely select them for model training. 
+
+Looking at chi-square statistic scores below in graphical:
+
+<p align="center">
+    <img width=500, height=400, src="./images/chi_stats.png">
+</p>
+
+Higher the Chi-Square value, the feature is more dependent on the response and it may be selected for model training.
+
+touch_screen looks most desirable to be selected
+three_g is worst.
 
 # Summary
 
