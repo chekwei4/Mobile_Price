@@ -94,7 +94,7 @@ Ram, battery_power, px_width, px_height, mobile_wt came in top 5.
 
 Kitchen sink method, which included all features. 
 
-Accuracy = 0.90
+**Accuracy = 0.90**
 
 # Method 2 - Manual Filtering 
 
@@ -104,7 +104,7 @@ Least dependene 3 features per ANOVA test were removed.
 ['pc', 'fc', 'clock_speed']
 ```
 
-Accuracy = 0.89
+**Accuracy = 0.89**
 
 # Method 3 - ANOVA with GridSearchCV for Best K Value
 
@@ -124,7 +124,7 @@ We are down to 4 features now
 ['battery_power', 'px_height', 'px_width', 'ram']
 ```
 
-Accuracy = 0.916
+**Accuracy = 0.916**
 
 # Method 4 - RFECV
 
@@ -138,7 +138,7 @@ After RFECV, we are down to just 5 features only/
 ['battery_power', 'mobile_wt', 'px_height', 'px_width', 'ram']
 ```
 
-Accuracy = 0.92
+**Accuracy = 0.92**
 
 <p align="center">
     <img width=400, height=300, src="./images/rfecv.png">
@@ -147,6 +147,13 @@ Accuracy = 0.92
 From the graph, we can also see that model works best with around 4 - 6 features, and deteriorate in accuracy when more features are added. 
 
 # Conclusion
+
+| Method                  	| Accuracy 	| Number of Features 	|
+|-------------------------	|----------	|--------------------	|
+| Baseline                	|   0.90   	|                 20 	|
+| Filtering               	|   0.89   	|                 17 	|
+| ANOVA with GridSearchCV 	|   0.916  	|                  4 	|
+| RFECV                   	|   0.92   	|                  5 	|
 
 Instead of using all the 20 features for model training, we could actually only use 4 - 6 features which yield better results.
 
