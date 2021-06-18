@@ -92,6 +92,8 @@ Ram, battery_power, px_width, px_height, mobile_wt came in top 5.
 
 # Method 1 - Baseline Model
 
+Kitchen sink method, which included all features. 
+
 Accuracy = 0.90
 
 # Method 2 - Manual Filtering 
@@ -150,5 +152,4 @@ Instead of using all the 20 features for model training, we could actually only 
 
 With model tuning in future enhancement, our results could even be better.
 
-
-
+For full analysis, please visit https://github.com/chekwei4/Mobile_Price/blob/main/Mobile_Phone_Prediction.ipynb
